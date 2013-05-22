@@ -1,0 +1,28 @@
+{
+	"baseObject" : {
+
+	},
+
+	"baseItem" : {
+		"base" : "baseObject",
+		"carry" : 1
+	},
+
+	"material" : {
+		"base" : "baseItem"
+	},
+
+	"testObject" : {
+		"base" : "baseItem",
+		"test" : 1,
+		"test2" : 2,
+		"randomWeight" : [5, 40]
+	},
+
+	"testObject2" : {
+		"base": "testObject",
+		"append" : 111,
+		"innerObject" : "material"
+	}
+
+}

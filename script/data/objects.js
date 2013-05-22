@@ -6,33 +6,14 @@
  * To change this template use File | Settings | File Templates.
  */
 "use strict";
-var Objects = {
-    baseObject : {
 
-    },
+var Database = Database || {};
 
-    baseItem : {
-        base : "baseObject",
-        carry : 1
-    },
-
-    material : {
-        base : "baseItem"
-
-    },
-
-    testObject : {
-        base: "baseItem",
-        test : 1,
-        test2 : 2,
-        randomWeight: [5, 40],
-        rndomWeight: [5, 40]
-    },
-
-    testObject2 : {
-        base: 'testObject',
-        append : 111,
-        innerObject : 'material'
-    }
-
-};
+Database.objects = (function(){
+	var request = new XMLHttpRequest();
+	request.open('GET', 'objects.json', false);
+	request.send(null);
+	if(request.status == 200) {
+		console.log(xmlhttp.responseText);
+	}
+})();
